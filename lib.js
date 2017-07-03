@@ -27,13 +27,13 @@ const calculateTotals =
     carts => {
       const array = [{customer: '', total: 0}]
       array.length = 0
-      carts.forEach(function (cart) {
+      carts.forEach(cart => {
         const {customer, items} = cart
         let total = 0
-        items.forEach(function (item) {
-          listings.forEach(function (listing) {
+        items.forEach(item => {
+          listings.forEach(listing => {
             if (listing.name === item) {
-            total = total + listing.price
+              total = total + listing.price
           }
           })
         })
